@@ -33,7 +33,7 @@ class NetCDFHandler(BaseHandler):
 
         try:
             self.fp = netcdf_file(filepath)
-        except Exception, exc:
+        except Exception as exc:
             message = 'Unable to open file %s: %s' % (filepath, exc)
             raise OpenFileError(message)
 
